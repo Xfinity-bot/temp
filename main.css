@@ -1,0 +1,163 @@
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #100e17;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: 
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: ;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .containerSkill{
+    background-image: linear-gradient(90deg,#fc4a1a,#f7b733);
+     padding-top: 19px;
+  }
+  .containerSkill img{
+      margin: auto;
+      
+  }
+  .containerSkill p{
+      padding-bottom: 10px;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #100e17;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+  }
+  .skillbox{
+      display: flex;
+      justify-content: space-around;
+  }
+ 
+  
+  
+  
+  
+  
+  .skillList
+  {
+      margin: 0;
+      padding: 0;
+      box-shadow: 0 15px 40px rgba(0,0,0,1);
+  }
+  .skillList li
+  {
+      position: relative;
+      list-style: none;
+      font-size: 1.5em;
+      padding: 15px;
+      color: #fff;
+      transition: 0.5s;
+      cursor: pointer;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      font-family: 'Poppins', sans-serif;
+  }
+  .skillList li:last-child
+  {
+      border-bottom: none;
+  }
+  .skillList li:hover
+  {
+      color: #262626;
+  }
+  .skillList li:before
+  {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:linear-gradient(90deg,#fc4a1a,#f7b733);
+      z-index: -1;
+      transform: scaleY(0);
+      transition: transform 0.5s;
+      transform-origin: bottom;
+  }
+  .skillList li:hover:before
+  {
+      transform: scaleY(1);
+      transition: transform 0.5s;
+      transform-origin: top;
+  }
+  .skillList li:after
+  {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,#fc4a1a,#f7b733);
+      z-index: -2;
+      transform: scaleY(0);
+      transition: transform 0.5s;
+      transform-origin: bottom;
+      filter: blur(40px);
+  }
+  .skillList li:hover:after
+  {
+      transform: scaleY(1);
+      transition: transform 0.5s;
+      transform-origin: top;
+  }
+  
+  .forSpace{
+      margin-top: 29%;
+  }@media screen and (max-width: 1024px)
+  {
+    .skillbox{
+        
+     display:none;
+     
+     
+    }
+    #skillbox1,#skillbox2,#skillbox3{
+        
+        padding: 20% 12%;
+        
+        
+    }
+    
+  }
+  
+
+ 
